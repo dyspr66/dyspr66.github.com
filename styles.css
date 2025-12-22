@@ -11,15 +11,16 @@
 
 body {
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("./wood.png");
     background-size: cover;
     display: flex;
     justify-content: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("./images/wood.png");
 }
 
 main {
-    background-image: url("./paper.png");
+    background-image: url("./images/paper.png");
     background-size: cover;
     display: flex;
     flex-direction: column;
