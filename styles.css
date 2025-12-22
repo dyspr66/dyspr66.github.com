@@ -1,12 +1,13 @@
 :root {
-    --dark-color: #1d1712;
-    --light-color: #d8cab6;
+    --dark-color: #0b0a08;
+    --light-color: #cbb78e;
 }
 
 * {
     color: var(--dark-color);
     margin: 0;
     padding: 0;
+    font-family: "Times New Roman", Times, serif;
 }
 
 body {
@@ -20,7 +21,11 @@ body {
 }
 
 main {
-    background-image: url("./images/paper.png");
+    background: linear-gradient(
+            rgba(192, 173, 134, 0.5),
+            rgba(192, 173, 134, 0.5)
+        ),
+        url("./images/paper.png");
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -41,9 +46,11 @@ h1 {
 }
 
 h2 {
+    font-size: 1.75rem;
 }
 
 h3 {
+    font-size: 1.5rem;
 }
 
 section {
@@ -84,7 +91,7 @@ blockquote {
 }
 
 .img {
-    filter: grayscale(100%);
+    filter: sepia(100%);
     max-width: 275px;
 }
 
