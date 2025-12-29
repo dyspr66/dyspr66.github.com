@@ -47,16 +47,8 @@ h3 {
     text-align: center;
 }
 
-h1 {
-    font-size: 2.75rem;
-}
-
-h2 {
-    font-size: 1.75rem;
-}
-
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
 article {
@@ -67,6 +59,7 @@ article {
 
 section {
     border: 1.5px solid black;
+    font-size: 1.2rem;
     padding: 0.5rem;
 }
 
@@ -96,7 +89,7 @@ nav > a {
 
 p,
 ul {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 blockquote {
@@ -105,7 +98,7 @@ blockquote {
 
 .title {
     font-family: "UnifrakturMaguntia", cursive;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     padding: 0px;
 }
 
