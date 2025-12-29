@@ -63,15 +63,16 @@ section {
     padding: 0.5rem;
 }
 
-ul {
-    padding-left: 2rem;
-}
-
 button {
     background-color: var(--dark-color);
     border: none;
     color: var(--light-color);
     padding: 1rem 2.5rem;
+}
+
+button > a {
+    color: var(--light-color);
+    text-decoration: none;
 }
 
 nav {
@@ -87,9 +88,13 @@ nav > a {
     text-decoration: none;
 }
 
-p,
-ul {
+p {
     margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 blockquote {
