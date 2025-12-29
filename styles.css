@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=Pirata+One&display=swap");
 :root {
     --dark-color: #0b0a08;
     --light-color: #cbb78e;
 }
 
+/* Mobile / Base Styles */
+
 * {
     color: var(--dark-color);
-    margin: 0;
-    padding: 0;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "IM Fell DW Pica SC", serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -21,23 +24,24 @@ body {
 }
 
 main {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 80vw;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+
     background: linear-gradient(
             rgba(192, 173, 134, 0.5),
             rgba(192, 173, 134, 0.5)
         ),
         url("./images/paper.png");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem;
-    max-width: 80vw;
-    padding: 1.5rem 0.5rem;
 }
 
 h1,
 h2,
 h3 {
+    font-family: "UnifrakturMaguntia", cursive;
     text-align: center;
 }
 
@@ -51,6 +55,12 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 section {
@@ -72,6 +82,7 @@ button {
 nav {
     background-color: var(--dark-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 1rem;
 }
@@ -90,14 +101,37 @@ blockquote {
     font-style: italic;
 }
 
+.title {
+    font-family: "UnifrakturMaguntia", cursive;
+    font-size: 2.5rem;
+    padding: 0px;
+}
+
+.subtitle {
+    font-family: "IM Fell DW Pica SC", serif;
+    font-size: 1.25rem;
+    margin-bottom: -1.5rem;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
 .img {
     filter: sepia(100%);
-    max-width: 275px;
+    min-width: 100%;
 }
 
 .buttons {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     justify-content: space-evenly;
+}
+
+.buttons > button {
+    width: 50%;
 }
 
 .quote {
@@ -106,4 +140,80 @@ blockquote {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.top-separator {
+    margin-top: -1rem;
+}
+
+.separator {
+    border-bottom: 2px solid var(--dark-color);
+    border-top: 1px solid var(--dark-color);
+    height: 0.25rem;
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: lightgray;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 50% 1fr 1fr;
+
+        grid-template-areas:
+            "gridpicture gridpicture gridpicture"
+            "gridmain gridside1 gridside1"
+            "gridmain gridside2 gridside2";
+    }
+
+    .grid-picture {
+        grid-area: gridpicture;
+    }
+
+    .grid-main {
+        grid-area: gridmain;
+    }
+
+    .grid-side1 {
+        grid-area: gridside1;
+    }
+
+    .grid-side2 {
+        grid-area: gridside2;
+    }
+
+    .img {
+        object-fit: cover;
+    }
+
+    .buttons > button {
+        width: 100%;
+    }
+
+    .separator {
+        border-bottom: 3px solid var(--dark-color);
+        border-top: 2px solid var(--dark-color);
+        height: 0.25rem;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 33% 1fr 1fr;
+
+        grid-template-areas:
+            "gridpicture gridmain gridside1"
+            "gridpicture gridmain gridside2";
+    }
 }
